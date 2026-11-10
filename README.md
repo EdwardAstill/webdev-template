@@ -77,6 +77,8 @@ Bun installs packages, runs scripts, and executes the Next.js CLI. Next.js owns 
 
 Keep `bun.lock` committed. Use `bun add <package>` to add dependencies. When upgrading Bun, update `.bun-version` and the `packageManager` and `engines` fields in `package.json` together, then run the checks and production smoke test again.
 
+Next.js is pinned to 16.4.6 for the security upgrade from 16.4.0. `experimental.agentUpgrade: "security"` keeps upgrade reminders focused on security fixes.
+
 As of 10 October 2026, `bun audit` reports an unpatched [nested-pattern denial-of-service issue in `braces`](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm), reached only through the ESLint and shadcn development tooling in this template. It is not in the production dependency graph. Recheck the advisory when updating dependencies; `bun audit fix` currently has no published fix.
 
 ## Environment and deployment
